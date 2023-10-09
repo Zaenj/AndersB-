@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AndersBø</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AndersBø.styles.css" asp-append-version="true" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Anders Børjesson</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" >Erhvervsakademi Sjælland</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://anbo-easj.dk/cv/">CV</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-5 border-top">
+        <div class="container">
+            <p>
+                <a href="https://learn.microsoft.com/da-dk/">Microsoft Developer Network</a> |
+                <a href="https://learn.microsoft.com/da-dk/docs/">MSDN Library: Intro. til programmeringssprog mv.</a>
+            </p>
+            <p>
+                <a href="https://anbo-easj.dk/bekendtgoerelser/">Bekendtg&oslash;relser</a> om datamatiker-uddannelsen, eksamen og lign.
+                <a href="https://anbo-easj.dk/index.htm">index</a>
+            </p>
+        </div>
+    </footer>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
